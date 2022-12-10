@@ -17,7 +17,7 @@ var PvMonstre3 =  document.getElementById("F_HP");
 var ActionsHTML = document.getElementsByClassName("actions")[0];
 var bouttonAttaque = document.getElementById("Attaque");
 var bouttonDefense = document.getElementById("Defense");
-var bouttonAttaqueSpé = document.getElementById("Attaque_Speciale");
+var bouttonAttaqueSpe = document.getElementById("Attaque_Speciale");
 
 var Monstre1PV = 100
 var Monstre1ATK= 10
@@ -49,27 +49,21 @@ perso1.onclick = function() {
             Monstre1PV = Monstre1PV  - Perso1ATK
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML = Perso1ATK + " de dégâts  !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
+           
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - Perso1ATK
             PvMonstre2.innerHTML =  Monstre2PV + "/100 PV ";
             dialogue.innerHTML = Perso1ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
+           
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - Perso1ATK
             PvMonstre3.innerHTML =  Monstre3PV + "/100PV ";
             dialogue.innerHTML = Perso1ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
+           
         }
         perso1.onclick = "none";
         
@@ -88,27 +82,19 @@ perso2.onclick = function() {
             Monstre1PV = Monstre1PV - Perso2ATK
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML = Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - Perso2ATK
             PvMonstre2.innerHTML = Monstre2PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - Perso2ATK
             PvMonstre3.innerHTML = Monstre3PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
+
         }
             perso2.onclick = "none";
         
@@ -127,27 +113,18 @@ perso3.onclick = function() {
             Monstre1PV = Monstre1PV - Perso3ATK
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML =  + Perso3ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - Perso3ATK
             PvMonstre2.innerHTML = Monstre2PV + "/100 PV </h2>";
             dialogue.innerHTML =  + Perso3ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - Perso3ATK
             PvMonstre3.innerHTML = Monstre3PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso3ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
             perso3.onclick = "none";
         
@@ -167,27 +144,19 @@ perso4.onclick = function() {
             Monstre1PV = Monstre1PV - Perso4ATK
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML =  + Perso4ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - Perso4ATK
             PvMonstre2.innerHTML = Monstre2PV + "/100 PV </h2>";
             dialogue.innerHTML =  + Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - Perso4ATK
             PvMonstre3.innerHTML = Monstre3PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso4ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
+
         }
             perso4.onclick = "none";
         
@@ -211,38 +180,28 @@ function boutonDefendre() {
 
 perso1.onclick = function() {
     console.log("le perso a bien ete selectionner ")
-        if( perso1Play)
     
     dialogue.innerHTML = "Actions de  personnage 1";
     ActionsHTML.style.visibility = "visible";
-    bouttonAttaqueSpé.onclick = function() {
+    bouttonAttaqueSpe.onclick = function() {
         
         dialogue.innerHTML = "Quelle ennemi veut tu attaquer";
         monstre1.onclick = function() {
             Monstre1PV = Monstre1PV  - (Perso1ATK + 15)
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML = Perso1ATK + " de dégâts  !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - (Perso1ATK + 15)
             PvMonstre2.innerHTML =  Monstre2PV + "/100 PV ";
             dialogue.innerHTML = Perso1ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - (Perso1ATK + 15)
             PvMonstre3.innerHTML =  Monstre3PV + "/100PV ";
             dialogue.innerHTML = Perso1ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
         perso1.onclick = "none";
         
@@ -256,34 +215,26 @@ perso1.onclick = function() {
 
 perso2.onclick = function() {
     dialogue.innerHTML = "attaque speciale du personnage 2";
-    bouttonAttaqueSpé.onclick = function() {
+    bouttonAttaqueSpe.onclick = function() {
         
         dialogue.innerHTML = "Quelle ennemi veut tu attaquer";
         monstre1.onclick = function() {
             Monstre1PV = Monstre1PV - (Perso2ATK + 5)
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML = Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - (Perso2ATK + 5)
             PvMonstre2.innerHTML = Monstre2PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
+
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - (Perso2ATK + 5)
             PvMonstre3.innerHTML = Monstre3PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
             perso2.onclick = "none";
         
@@ -291,38 +242,29 @@ perso2.onclick = function() {
 
 }
 
-// Attaque personnage 3
+// Attaque speciale personnage 3
 
 perso3.onclick = function() {
     dialogue.innerHTML = "Actions du personnage 3";
-    bouttonAttaque.onclick = function() {
+    bouttonAttaqueSpe.onclick = function() {
         
         dialogue.innerHTML = "Quelle ennemi veut tu attaquer";
         monstre1.onclick = function() {
             Monstre1PV = Monstre1PV - (Perso3ATK + 10)
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML =  + Perso3ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - (Perso3ATK + 10)
             PvMonstre2.innerHTML = Monstre2PV + "/100 PV </h2>";
             dialogue.innerHTML =  + Perso3ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - (Perso3ATK + 10)
             PvMonstre3.innerHTML = Monstre3PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso3ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
             perso3.onclick = "none";
@@ -332,38 +274,29 @@ perso3.onclick = function() {
 }
 
 
-// Attaque personnage 4
+// Attaque speciale personnage 4
 
 perso4.onclick = function() {
     dialogue.innerHTML = "Actions du personnage 2";
-    bouttonAttaque.onclick = function() {
+    bouttonAttaqueSpe.onclick = function() {
         
         dialogue.innerHTML = "Quelle ennemi veut tu attaquer";
         monstre1.onclick = function() {
             Monstre1PV = Monstre1PV - (Perso4ATK + 20 )
             PvMonstre1.innerHTML = Monstre1PV + "/100 PV";
             dialogue.innerHTML =  + Perso4ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
            
         monstre2.onclick = function() {
             Monstre2PV = Monstre2PV - (Perso4ATK + 20 )
             PvMonstre2.innerHTML = Monstre2PV + "/100 PV </h2>";
             dialogue.innerHTML =  + Perso2ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
 
         monstre3.onclick = function() {
             Monstre3PV = Monstre3PV - (Perso4ATK + 20 )
             PvMonstre3.innerHTML = Monstre3PV + "/100 PV </h2>";
             dialogue.innerHTML = Perso4ATK + " de dégâts !<br> Sélectionnez un personnage";
-            monstre1.onclick = "none";
-            monstre2.onclick = "none";
-            monstre3.onclick = "none";
         }
             perso4.onclick = "none";
         
