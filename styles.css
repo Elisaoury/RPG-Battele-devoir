@@ -1,0 +1,85 @@
+h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    color: darkred;
+    text-align: center;
+}
+
+body {
+
+    font-family: "font-1", serif;
+    background: url(background.png) ;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#container {
+    height: 500 px;
+}
+
+
+#background {
+    position: fixed;
+}
+
+#topRow {
+    display: flex;
+    border: 1px solid;
+    border-color: red;
+    /*justify-content: center;*/
+}
+
+#personnage {
+
+     position: absolute;
+     left: 50px;
+     bottom: 180px;
+}
+
+#personnage img {
+    height: 100px;
+   
+}
+
+
+#monstre {
+    position: absolute;
+    right: 125px;
+    bottom: 180px;
+    transform: scale(2);
+
+}
+
+.UI {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chars {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+
+}
+
+#E_HP { 
+    transform: scale(0.5) ;
+}
+
+
+#F_HP { 
+    transform: scale(0.5) ;
+}
+
+#G_HP { 
+    transform: scale(0.5) ;
+}
+
+
+
